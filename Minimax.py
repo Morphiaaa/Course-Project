@@ -93,66 +93,7 @@ class miniMax:
 			#print ("GI")
 			return self.result
 
-	# def alphabeta(self, grid, depth, alpha, beta, player):
-	# 	v = valueFunction.ValueFunction()
-	# 	s = in2048()
 
-	# 	actions = s.getActions()
-	# 	#moves = s.move(actions)
-	# 	result = {'bestscore': 0, 'bestdirection': None}
 
-	# 	if depth == 0 or not actions:
-	# 		bestscore = v.get(self.grid)
-	# 		return result.append(bestscore),result.append(None)
 
-	# 	elif player == Players.AI:
-	# 		bestscore = -sys.maxint - 1
-	# 		for j in actions:
-	# 			newgrid = s.move(i, 3)[1]
 
-	# 			points = v.get(newgrid)
-	# 			if points == 0 and newgrid == self.grid:
-	# 				continue
-
-	# 			currentScore = self.alphabeta(newgrid, depth-1, alpha, beta, Players.COMPUTER)[0] + points
-	# 			if currentScore > alpha:
-	# 				alpha = currentScore
-	# 			if beta <= alpha:
-	# 				break                      # beta cutoff
-	# 		bestscore = alpha
-	# 		bestDirection = actions[j]
-	# 		return result['bestscore'] = bestscore, result['bestdirection'] = bestDirection
-
-	# 	else:
-	# 		bestscore = sys.maxint
-	# 		freeCells = s.availableCell(self.grid)
-
-	# 		if freeCells.size <= 3:
-	# 			for cell in freeCells:
-	# 				newgrid = in2048(self.grid)
-	# 				newgrid1 = s.addRandomTile(newgrid)
-	# 				points = v.get(newgrid1)
-	# 				currentScore = alphabeta(newgrid1, depth-1, alpha, beta, Players.AI)[0] + points
-
-	# 				if currentScore < beta:
-	# 					beta = currentScore
-	# 				if beta <= alpha:
-	# 					break                #alpha cutoff
-
-	# 			bestscore = beta
-	# 			return result['bestscore'] = bestscore
-
-	# 		else:
-	# 			for cell in random.sample(freeCells, 3):          # keep three samples
-	# 				newgrid = in2048(self.grid)
-	# 				newgrid2 = s.addRandomTile(newgrid)
-	# 				points = v.get(newgrid2)
-	# 				currentScore = alphabeta(newgrid2, depth-1, alpha, beta, Players.COMPUTER)[0] + points
-
-	# 				if currentScore < beta:
-	# 					beta = currentScore
-	# 				if beta <= alpha:
-	# 					break            #alpha cutoff
-
-	# 			bestscore = beta
-	# 			return result['bestscore'] = bestscore
